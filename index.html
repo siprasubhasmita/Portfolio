@@ -40,215 +40,74 @@
         transition: all 0.3s ease;
       }
       
-      /* Cyberpunk Neon Theme */
+      /* Simple Clean Theme */
       body {
         background: #0a0a0a;
-        background-image: 
-          radial-gradient(circle at 25% 25%, #ff00ff 0%, transparent 50%),
-          radial-gradient(circle at 75% 75%, #00ffff 0%, transparent 50%),
-          radial-gradient(circle at 50% 50%, #ffff00 0%, transparent 50%);
-        background-size: 100% 100%;
         color: #fff;
-        font-family: 'Courier New', monospace;
+        font-family: 'Arial', sans-serif;
       }
       
-      /* Matrix-style text animation */
+      /* Simple text styling */
       .matrix-text {
-        background: linear-gradient(45deg, #00ff00, #ff00ff, #00ffff, #ffff00);
-        background-size: 400% 400%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: matrixFlow 3s ease-in-out infinite;
+        color: #00ffff;
         font-weight: bold;
         text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
       }
       
-      @keyframes matrixFlow {
-        0%, 100% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-      }
-      
-      /* Holographic card effect */
+      /* Simple card effect */
       .holo-card {
-        background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-        backdrop-filter: blur(15px);
-        border: 2px solid transparent;
-        background-clip: padding-box;
-        border-radius: 20px;
-        position: relative;
-        overflow: hidden;
-        transition: all 0.4s ease;
-      }
-      
-      .holo-card::before {
-        content: '';
-        position: absolute;
-        top: -2px; left: -2px; right: -2px; bottom: -2px;
-        background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
-        border-radius: 20px;
-        z-index: -1;
-        opacity: 0;
-        transition: opacity 0.4s ease;
-      }
-      
-      .holo-card:hover::before {
-        opacity: 1;
+        background: rgba(17, 17, 17, 0.9);
+        border: 1px solid #333;
+        border-radius: 10px;
+        transition: all 0.3s ease;
       }
       
       .holo-card:hover {
-        transform: translateY(-15px) rotateX(5deg);
-        box-shadow: 0 20px 40px rgba(255,0,255,0.3);
+        border-color: #00ffff;
+        box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
       }
       
-      /* Glitch effect for name */
+      /* Simple text effect for name */
       .glitch-text {
-        position: relative;
-        color: #fff;
+        color: #00ffff;
         font-size: 4rem;
         font-weight: bold;
         text-transform: uppercase;
-        animation: glitch 2s infinite;
       }
       
-      .glitch-text::before,
-      .glitch-text::after {
-        content: attr(data-text);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-      
-      .glitch-text::before {
-        animation: glitch-1 2s infinite;
-        color: #ff00ff;
-        z-index: -1;
-      }
-      
-      .glitch-text::after {
-        animation: glitch-2 2s infinite;
-        color: #00ffff;
-        z-index: -2;
-      }
-      
-      @keyframes glitch {
-        0%, 100% { transform: translate(0); }
-        20% { transform: translate(-2px, 2px); }
-        40% { transform: translate(-2px, -2px); }
-        60% { transform: translate(2px, 2px); }
-        80% { transform: translate(2px, -2px); }
-      }
-      
-      @keyframes glitch-1 {
-        0%, 100% { transform: translate(0); }
-        20% { transform: translate(2px, -2px); }
-        40% { transform: translate(-2px, 2px); }
-        60% { transform: translate(-2px, -2px); }
-        80% { transform: translate(2px, 2px); }
-      }
-      
-      @keyframes glitch-2 {
-        0%, 100% { transform: translate(0); }
-        20% { transform: translate(-2px, -2px); }
-        40% { transform: translate(2px, -2px); }
-        60% { transform: translate(2px, 2px); }
-        80% { transform: translate(-2px, 2px); }
-      }
-      
-      /* Neon border animation */
+      /* Simple border */
       .neon-border {
         border: 2px solid #00ffff;
         border-radius: 15px;
-        box-shadow: 
-          0 0 10px #00ffff,
-          inset 0 0 10px #00ffff,
-          0 0 20px #00ffff,
-          inset 0 0 20px #00ffff;
-        animation: neonPulse 2s ease-in-out infinite alternate;
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
       }
       
-      @keyframes neonPulse {
-        from {
-          box-shadow: 
-            0 0 10px #00ffff,
-            inset 0 0 10px #00ffff,
-            0 0 20px #00ffff,
-            inset 0 0 20px #00ffff;
-        }
-        to {
-          box-shadow: 
-            0 0 20px #ff00ff,
-            inset 0 0 20px #ff00ff,
-            0 0 40px #ff00ff,
-            inset 0 0 40px #ff00ff;
-        }
-      }
-      
-      /* Futuristic button */
+      /* Simple button */
       .cyber-btn {
         background: transparent;
         border: 2px solid #00ffff;
         color: #00ffff;
         padding: 12px 30px;
         text-transform: uppercase;
-        letter-spacing: 2px;
-        position: relative;
-        overflow: hidden;
+        letter-spacing: 1px;
         transition: all 0.3s ease;
-      }
-      
-      .cyber-btn::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, #00ffff, transparent);
-        transition: left 0.5s ease;
-      }
-      
-      .cyber-btn:hover::before {
-        left: 100%;
+        text-decoration: none;
+        display: inline-block;
       }
       
       .cyber-btn:hover {
         color: #000;
         background: #00ffff;
-        box-shadow: 0 0 20px #00ffff;
       }
       
-      /* Scanline effect */
-      .scanlines::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: repeating-linear-gradient(
-          0deg,
-          transparent,
-          transparent 2px,
-          rgba(0,255,255,0.1) 2px,
-          rgba(0,255,255,0.1) 4px
-        );
-        pointer-events: none;
-        animation: scanlines 2s linear infinite;
-      }
-      
-      @keyframes scanlines {
-        0% { transform: translateY(-100%); }
-        100% { transform: translateY(100vh); }
-      }
+      /* Remove scanlines effect - keeping it simple */
     </style>
   </head>
 
   <body>
     <!-- 🔷 Navbar -->
-   <nav class="navbar navbar-expand-lg shadow px-3 scanlines" style="position: relative;">
+   <nav class="navbar navbar-expand-lg shadow px-3" style="position: relative; background: #111;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="Sipra (300 x 300 px).png" alt="Logo" class="navbar-logo neon-border">
@@ -272,19 +131,11 @@
         <a class="nav-link matrix-text" href="#services">Services</a>
         <a class="nav-link matrix-text" href="#portfolio">Portfolio</a>
         <a class="nav-link matrix-text" href="#contact">Contact</a>
-
-        <a class="nav-link matrix-text" href="#contact">Contact</a>
       </div>
     </div>
   </div>
 </nav>
 
-<style>
-  .dropdown-menu .dropdown-item:hover {
-    background-color: #dc3545; /* Bootstrap red */
-    color: #fff;
-  }
-</style>
 
 
 
@@ -306,11 +157,11 @@
         </h1>
         <p data-aos="fade-up" data-aos-duration="2000" style="color: #00ffff; font-size: 1.2rem;">
           Enthusiastic fresher passionate about crafting modern web applications.<br>
-          Specializing in <strong style="color: #ff00ff;">HTML</strong>, <strong style="color: #ffff00;">CSS</strong>, <strong style="color: #00ff00;">JavaScript</strong>, and <strong style="color: #ff00ff;">Java</strong>.
+          Specializing in <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>Java</strong>.
         </p>
         <div class="mt-4">
           <a href="#contact" class="cyber-btn me-3" data-aos="fade-up" data-aos-duration="2000">Get In Touch</a>
-          <a href="#portfolio" class="cyber-btn" style="border-color: #ff00ff; color: #ff00ff;" data-aos="fade-up" data-aos-duration="2000">View Work</a>
+          <a href="#portfolio" class="cyber-btn" data-aos="fade-up" data-aos-duration="2000">View Work</a>
         </div>
       </div>
     </div>
@@ -452,7 +303,7 @@ particlesJS('particles-js-hero', {
 </style>
 
 <!-- About Section -->
-<section id="about" class="py-5 text-white scanlines" style="background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(26,26,46,0.9)); position: relative;" data-aos="fade-right" data-aos-duration="2000">
+<section id="about" class="py-5 text-white" style="background: #111; position: relative;" data-aos="fade-right" data-aos-duration="2000">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-4 text-center">
@@ -523,16 +374,16 @@ particlesJS('particles-js-hero', {
       <div class="col-md-8">
         <h1 class="sub-title matrix-text fw-bold" style="font-size: 3rem;" data-aos="fade-up" data-aos-duration="2000">About Me</h1>
         <p class="lead" style="color: #00ffff; font-size: 1.1rem;" data-aos="fade-up" data-aos-duration="2000">
-  I am an <strong style="color: #ff00ff;">enthusiastic fresher</strong> with a strong foundation in web development and design. Currently pursuing my <strong style="color: #ffff00;">Master of Computer Applications (MCA)</strong> at <strong style="color: #00ff00;">ABIT under BPUT</strong> with a <strong style="color: #ff00ff;">CGPA of 8.5</strong>, graduating in <strong>2025</strong>.  
-  I am proficient in <strong style="color: #00ffff;">HTML</strong>, <strong style="color: #ff00ff;">CSS</strong>, <strong style="color: #ffff00;">JavaScript</strong>, <strong style="color: #00ff00;">Java</strong>, and <strong style="color: #ff69b4;">MySQL</strong>. I am passionate about creating <strong style="color: #00ffff;">innovative web solutions</strong> and eager to contribute to dynamic team environments.  
-  I completed my <strong style="color: #ff00ff;">B.Sc. Chemistry (Hons)</strong> from <strong style="color: #00ff00;">Sri Sri Bayababa College, Kendrapara</strong> under <strong style="color: #ffff00;">Utkal University</strong> with <strong style="color: #ff00ff;">68.90% with Distinction</strong> in <strong>2023</strong>.
+  I am an <strong>enthusiastic fresher</strong> with a strong foundation in web development and design. Currently pursuing my <strong>Master of Computer Applications (MCA)</strong> at <strong>ABIT under BPUT</strong> with a <strong>CGPA of 8.5</strong>, graduating in <strong>2025</strong>.  
+  I am proficient in <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>Java</strong>, and <strong>MySQL</strong>. I am passionate about creating <strong>innovative web solutions</strong> and eager to contribute to dynamic team environments.  
+  I completed my <strong>B.Sc. Chemistry (Hons)</strong> from <strong>Sri Sri Bayababa College, Kendrapara</strong> under <strong>Utkal University</strong> with <strong>68.90% with Distinction</strong> in <strong>2023</strong>.
 </p>
 
         <div class="d-flex justify-content-start flex-wrap gap-2">
           <button class="btn cyber-btn" data-bs-toggle="collapse" data-bs-target="#skills" data-aos="fade-up" data-aos-duration="2000">Skills</button>
-          <button class="btn cyber-btn" style="border-color: #ff00ff; color: #ff00ff;" data-bs-toggle="collapse" data-bs-target="#experience" data-aos="fade-up" data-aos-duration="2000">Experience</button>
-          <button class="btn cyber-btn" style="border-color: #ffff00; color: #ffff00;" data-bs-toggle="collapse" data-bs-target="#education" data-aos="fade-up" data-aos-duration="2000">Education</button>
-          <button class="btn cyber-btn" style="border-color: #00ff00; color: #00ff00;" data-bs-toggle="collapse" data-bs-target="#projects" data-aos="fade-up" data-aos-duration="2000">Projects</button>
+          <button class="btn cyber-btn" data-bs-toggle="collapse" data-bs-target="#experience" data-aos="fade-up" data-aos-duration="2000">Experience</button>
+          <button class="btn cyber-btn" data-bs-toggle="collapse" data-bs-target="#education" data-aos="fade-up" data-aos-duration="2000">Education</button>
+          <button class="btn cyber-btn" data-bs-toggle="collapse" data-bs-target="#projects" data-aos="fade-up" data-aos-duration="2000">Projects</button>
         </div>
       </div>
     </div>
@@ -543,22 +394,56 @@ particlesJS('particles-js-hero', {
         <!-- Skills -->
        <div class="accordion-item holo-card my-3">
   <h2 class="accordion-header">
-    <button class="accordion-button matrix-text" style="background: transparent; border: none;" data-bs-toggle="collapse" data-bs-target="#skills">
+    <button class="accordion-button collapsed" style="background: #111; border: none; color: #fff; font-weight: bold; font-size: 1.2rem;" data-bs-toggle="collapse" data-bs-target="#skills" aria-expanded="false" aria-controls="skills">
       Skills
     </button>
   </h2>
   <div id="skills" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
-    <div class="accordion-body" style="color: #00ffff;">
-      <ul style="list-style: none; padding: 0;">
-        <li style="margin-bottom: 10px;"><strong style="color: #ff00ff;">Programming Languages:</strong> <span style="color: #ffff00;">C, Java, JavaScript</span></li>
-        <li style="margin-bottom: 10px;"><strong style="color: #ff00ff;">Web Technologies:</strong> <span style="color: #00ff00;">HTML, CSS</span></li>
-        <li style="margin-bottom: 10px;"><strong style="color: #ff00ff;">Database Management:</strong> <span style="color: #00ffff;">MySQL</span></li>
-        <li style="margin-bottom: 10px;"><strong style="color: #ff00ff;">Design & Development:</strong> <span style="color: #ff69b4;">Responsive Web Design, User Interface Design</span></li>
-        <li style="margin-bottom: 10px;"><strong style="color: #ff00ff;">Tools & Technologies:</strong> <span style="color: #32cd32;">Git, Bootstrap, Modern Web Standards</span></li>
-        <li style="margin-bottom: 10px;"><strong style="color: #ff00ff;">Soft Skills:</strong> <span style="color: #ffa500;">Detail-oriented, Team Collaboration, Problem-solving, Adaptability</span></li>
-        <li style="margin-bottom: 10px;"><strong style="color: #ff00ff;">Languages:</strong> <span style="color: #87ceeb;">English, Hindi, Odia</span></li>
-        <li><strong style="color: #ff00ff;">Extracurricular:</strong> <span style="color: #98fb98;">Regular participant in marathons and sports events</span></li>
-      </ul>
+    <div class="accordion-body" style="background: #000; border-radius: 10px; padding: 20px; border: 1px solid #333;">
+      <div class="row">
+        <div class="col-md-6">
+          <h5 style="color: #fff; margin-bottom: 15px; border-bottom: 2px solid #333; padding-bottom: 8px;">Technical Skills</h5>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 15px; padding: 12px; background: #111; border-radius: 8px; border-left: 3px solid #00ffff;">
+              <strong style="color: #fff;">Programming Languages:</strong><br>
+              <span style="color: #ccc; font-size: 0.95em;">C, Java, JavaScript</span>
+            </li>
+            <li style="margin-bottom: 15px; padding: 12px; background: #111; border-radius: 8px; border-left: 3px solid #00ffff;">
+              <strong style="color: #fff;">Web Technologies:</strong><br>
+              <span style="color: #ccc; font-size: 0.95em;">HTML, CSS</span>
+            </li>
+            <li style="margin-bottom: 15px; padding: 12px; background: #111; border-radius: 8px; border-left: 3px solid #00ffff;">
+              <strong style="color: #fff;">Database Management:</strong><br>
+              <span style="color: #ccc; font-size: 0.95em;">MySQL</span>
+            </li>
+            <li style="margin-bottom: 15px; padding: 12px; background: #111; border-radius: 8px; border-left: 3px solid #00ffff;">
+              <strong style="color: #fff;">Tools & Technologies:</strong><br>
+              <span style="color: #ccc; font-size: 0.95em;">Git, Bootstrap, Modern Web Standards</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h5 style="color: #fff; margin-bottom: 15px; border-bottom: 2px solid #333; padding-bottom: 8px;">Other Skills</h5>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 15px; padding: 12px; background: #111; border-radius: 8px; border-left: 3px solid #00ffff;">
+              <strong style="color: #fff;">Design & Development:</strong><br>
+              <span style="color: #ccc; font-size: 0.95em;">Responsive Web Design, User Interface Design</span>
+            </li>
+            <li style="margin-bottom: 15px; padding: 12px; background: #111; border-radius: 8px; border-left: 3px solid #00ffff;">
+              <strong style="color: #fff;">Soft Skills:</strong><br>
+              <span style="color: #ccc; font-size: 0.95em;">Detail-oriented, Team Collaboration, Problem-solving, Adaptability</span>
+            </li>
+            <li style="margin-bottom: 15px; padding: 12px; background: #111; border-radius: 8px; border-left: 3px solid #00ffff;">
+              <strong style="color: #fff;">Languages:</strong><br>
+              <span style="color: #ccc; font-size: 0.95em;">English, Hindi, Odia</span>
+            </li>
+            <li style="margin-bottom: 15px; padding: 12px; background: #111; border-radius: 8px; border-left: 3px solid #00ffff;">
+              <strong style="color: #fff;">Extracurricular:</strong><br>
+              <span style="color: #ccc; font-size: 0.95em;">Regular participant in marathons and sports events</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -650,7 +535,7 @@ particlesJS('particles-js-hero', {
 </section>
 
 <!-- Services Section -->
-<div id="services" class="services py-5 scanlines" style="background: linear-gradient(45deg, rgba(0,0,0,0.9), rgba(20,20,40,0.9)); color: white; position: relative;" data-aos="fade-left" data-aos-duration="2000">
+<div id="services" class="services py-5" style="background: #222; color: white; position: relative;" data-aos="fade-left" data-aos-duration="2000">
     <div class="container">
         <h1 class="sub-title text-center mb-4 matrix-text" style="font-size: 3rem;" data-aos="fade-up" data-aos-duration="2000">My Services</h1>
         <div class="row g-4">
@@ -667,30 +552,30 @@ particlesJS('particles-js-hero', {
             <!-- UX/UI Design -->
             <div class="col-md-6 col-lg-6">
                 <div class="card holo-card text-center shadow p-4 border-0">
-                    <i class="fa-solid fa-crop fa-3x mb-3" style="color: #ff00ff;"></i>
+                    <i class="fa-solid fa-crop fa-3x mb-3" style="color: #00ffff;"></i>
                     <h2 class="h4 matrix-text">UX/UI Design</h2>
                     <p style="color: #fff;">Transforming user experiences through intuitive designs that enhance interaction and usability.</p>
-                    <a href="#" class="cyber-btn" style="border-color: #ff00ff; color: #ff00ff;">Discover More</a>
+                    <a href="#" class="cyber-btn">Discover More</a>
                 </div>
             </div>
 
             <!-- Frontend Development -->
             <div class="col-md-6 col-lg-6">
                 <div class="card holo-card text-center shadow p-4 border-0">
-                    <i class="fa-brands fa-html5 fa-3x mb-3" style="color: #00ff00;"></i>
+                    <i class="fa-brands fa-html5 fa-3x mb-3" style="color: #00ffff;"></i>
                     <h2 class="h4 matrix-text">Frontend Development</h2>
                     <p style="color: #fff;">Building responsive and interactive web interfaces using modern HTML, CSS, and JavaScript.</p>
-                    <a href="#" class="cyber-btn" style="border-color: #00ff00; color: #00ff00;">See My Work</a>
+                    <a href="#" class="cyber-btn">See My Work</a>
                 </div>
             </div>
 
             <!-- Database Management -->
             <div class="col-md-6 col-lg-6">
                 <div class="card holo-card text-center shadow p-4 border-0">
-                    <i class="fa-solid fa-database fa-3x mb-3" style="color: #ffff00;"></i>
+                    <i class="fa-solid fa-database fa-3x mb-3" style="color: #00ffff;"></i>
                     <h2 class="h4 matrix-text">Database Management</h2>
                     <p style="color: #fff;">Designing and managing efficient MySQL databases for web applications and data storage.</p>
-                    <a href="#" class="cyber-btn" style="border-color: #ffff00; color: #ffff00;">Learn More</a>
+                    <a href="#" class="cyber-btn">Learn More</a>
                 </div>
             </div>
         </div>
@@ -770,7 +655,7 @@ particlesJS('particles-js-hero', {
 
 <!-- Footer Section -->
 <!-- Footer -->
-<footer class="custom-footer scanlines" style="background: linear-gradient(135deg, #000, #1a1a2e); position: relative;">
+<footer class="custom-footer" style="background: #111; position: relative;">
   <div class="custom-footer-container">
     <div class="footer-section">
       <h5 class="footer-title matrix-text">Sipra</h5>
@@ -781,29 +666,29 @@ particlesJS('particles-js-hero', {
       <h5 class="footer-title matrix-text">Quick Links</h5>
       <ul class="footer-links">
         <li><a href="#about" style="color: #00ffff;">About Me</a></li>
-        <li><a href="#projects" style="color: #ff00ff;">Projects</a></li>
-        <li><a href="#skills" style="color: #ffff00;">Skills</a></li>
-        <li><a href="#contact" style="color: #00ff00;">Contact</a></li>
+        <li><a href="#projects" style="color: #00ffff;">Projects</a></li>
+        <li><a href="#skills" style="color: #00ffff;">Skills</a></li>
+        <li><a href="#contact" style="color: #00ffff;">Contact</a></li>
       </ul>
     </div>
 
     <div class="footer-section">
       <h5 class="footer-title matrix-text">Contact</h5>
       <p class="footer-text">Email: <a href="mailto:nayaksipra08@gmail.com" style="color: #00ffff;">nayaksipra08@gmail.com</a></p>
-      <p class="footer-text">Phone: <a href="tel:+917848942377" style="color: #ff00ff;">+91 7848942377</a></p>
-      <p class="footer-text">Location: <span style="color: #ffff00;">Cuttack, Odisha, India</span></p>
+      <p class="footer-text">Phone: <a href="tel:+917848942377" style="color: #00ffff;">+91 7848942377</a></p>
+      <p class="footer-text">Location: <span style="color: #fff;">Cuttack, Odisha, India</span></p>
     </div>
   </div>
 
   <div class="footer-bottom">
     <div class="footer-socials">
       <a href="https://facebook.com/siprasubhasmita.nayak" class="cyber-btn" style="padding: 8px 12px; margin: 0 5px;"><i class="fab fa-facebook"></i></a>
-      <a href="https://wa.me/7848942377" class="cyber-btn" style="padding: 8px 12px; margin: 0 5px; border-color: #25d366; color: #25d366;"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://instagram.com/sipra_nayak" class="cyber-btn" style="padding: 8px 12px; margin: 0 5px; border-color: #e4405f; color: #e4405f;"><i class="fab fa-instagram"></i></a>
-      <a href="https://linkedin.com/in/sipra-nayak" class="cyber-btn" style="padding: 8px 12px; margin: 0 5px; border-color: #0077b5; color: #0077b5;"><i class="fab fa-linkedin"></i></a>
-      <a href="https://twitter.com/sipra_nayak" class="cyber-btn" style="padding: 8px 12px; margin: 0 5px; border-color: #1da1f2; color: #1da1f2;"><i class="fab fa-twitter"></i></a>
+      <a href="https://wa.me/7848942377" class="cyber-btn" style="padding: 8px 12px; margin: 0 5px;"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://instagram.com/sipra_nayak" class="cyber-btn" style="padding: 8px 12px; margin: 0 5px;"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/in/sipra-nayak" class="cyber-btn" style="padding: 8px 12px; margin: 0 5px;"><i class="fab fa-linkedin"></i></a>
+      <a href="https://twitter.com/sipra_nayak" class="cyber-btn" style="padding: 8px 12px; margin: 0 5px;"><i class="fab fa-twitter"></i></a>
     </div>
-    <p class="matrix-text">&copy; 2025 <strong>Siprasubhasmita Nayak</strong>. All rights reserved. <i class="fa-solid fa-heart" style="color: #ff00ff;"></i> Designed & Developed by Sipra</p>
+    <p class="matrix-text">&copy; 2025 <strong>Siprasubhasmita Nayak</strong>. All rights reserved. <i class="fa-solid fa-heart" style="color: #fff;"></i> Designed & Developed by Sipra</p>
   </div>
 </footer>
 <style>
